@@ -80,3 +80,19 @@ Example configuration (Claude Desktop, Antigravity and similar clients):
 - `google_auth.py`: loads and refreshes credentials (never opens a browser)
 - `gmail_tools.py`: Gmail search, read and draft
 - `calendar_tools.py`: Calendar list, free slots and create
+- `reflection.md`: lesson reflection
+
+## Prompts used in the session (2026-11-24)
+
+These are the prompts we gave the agent, in order, while it was connected to this MCP server:
+
+1. What do I have in my calendar tomorrow?
+2. Write a Gmail draft to myself with the subject "L06 test" and add a calendar event for today, 4 hours from now, called "MCP works".
+3. Find a free hour tomorrow between 09:00 and 17:00 and add an event called "Study group" there.
+4. Great. Now send the "L06 test" draft. *(The agent refused: the server has no send tool.)*
+5. Delete the "Study group" event. *(The agent refused: the server has no delete tool.)*
+6. Initialize a git repository in this folder. Before the first commit, show me git status and confirm that no token.json, client_secret*.json or .env file will be committed. Then commit with the message "L06 gmail-calendar MCP server".
+7. Push this git repository to https://github.com/GuyosMaximus/l06.git
+8. Retry git push -u origin master
+9. Act as my meeting coordinator. Find the latest meeting request in my email. Check my calendar for that time. If I am free, create the event and prepare a reply draft confirming it. If I am busy, do not create an event; prepare a reply draft that suggests two free times. Never send anything. Show me what you did, step by step.
+10. Create reflection.md with four empty sections: "What did we ask the agent?", "How did we check that the result is correct?", "Which tool did we leave out, and why?", "L05 vs L06: what changed?". Also add to README.md the list of prompts we used today. Then commit.
