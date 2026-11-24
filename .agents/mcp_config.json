@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gmail-calendar": {
+      "command": "uv",
+      "args": ["run", "--directory", "C:\\uoh\\l06", "server.py"],
+      "env": {
+        "GOOGLE_PRIVATE_DIR": "C:\\Users\\Guy\\.gemini\\antigravity\\scratch\\gmail-calendar-agent"
+      }
+    }
+  }
+}

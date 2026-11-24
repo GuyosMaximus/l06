@@ -1,0 +1,10 @@
+# Google secrets - never commit
+token.json
+client_secret*.json
+credentials.json
+.env
+
+# Python / uv
+__pycache__/
+*.pyc
+.venv/
